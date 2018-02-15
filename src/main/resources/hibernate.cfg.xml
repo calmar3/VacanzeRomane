@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+   <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+   </property>
+   <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+   </property>
+
+ 	<property name="hibernate.connection.url">
+      jdbc:mysql://localhost/vacanzeromanedb
+   </property>
+   <property name="hibernate.connection.username">
+      admin
+   </property>
+   <property name="hibernate.connection.password">
+     admin
+   </property>
+	   <property name="hibernate.hbm2ddl.auto">update</property>
+	   
+  	<property name="current_session_context_class">thread</property>
+		<!-- Enable debug information -->
+	<property name="show_sql">true</property>
+	<!-- <property name="hibernate.enable_lazy_load_no_trans">true</property> -->
+	<mapping class="entity.Affittuario"/>
+	<mapping class="entity.Gestore" />
+	<mapping class="entity.Utente"/>
+	<mapping class="entity.Camera"/>
+	<mapping class="entity.LineaPrenotazione"/>
+	<mapping class="entity.Prenotazione"/>
+	<mapping class="entity.Struttura"/>
+	<mapping class="entity.Pagamento"/>
+	<mapping class="entity.PagamentoBonifico"/>
+	<mapping class="entity.PagamentoCartaCredito"/>	
+	<mapping class="entity.Servizio"/>
+	<mapping class="entity.ServizioBase"/>
+	<mapping class="entity.ServizioPremium"/>
+	<mapping class="entity.DisponibilitaCamera"/>
+	
+
+</session-factory>
+</hibernate-configuration>
